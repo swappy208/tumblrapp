@@ -55,11 +55,11 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return posts.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! PhotoCell
-        cell.textLabel?.text = "This is row \(indexPath.row)"
+        //cell.textLabel?.text = "This is row \(indexPath.row)"
         let post = posts[indexPath.row]
         let photos = post.value(forKeyPath: "photos") as? [NSDictionary]
         if let photos = post.value(forKeyPath: "photos") as? [NSDictionary] {
