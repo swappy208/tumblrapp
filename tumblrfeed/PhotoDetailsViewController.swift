@@ -2,18 +2,27 @@
 //  PhotoDetailsViewController.swift
 //  tumblrfeed
 //
-//  Created by Swapnil Tamrakar on 2/9/17.
+//  Created by Swapnil Tamrakar on 2/10/17.
 //  Copyright © 2017 Swapnil Tamrakar. All rights reserved.
 //
 
 import UIKit
 
 class PhotoDetailsViewController: UIViewController {
-    @IBOutlet var imageViewer: UIView!
+    @IBOutlet weak var photoImageView: UIImageView!
 
+    var photo: NSDictionary!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let photos = photo["photos"] as? [NSDictionary]{
+            
+            let imageURLString = photos[0].value(forKeyPath: "original_size.url") as? String
+            if let imageUrl = NSURL(string: imageURLString!) {
+                photoImageView.setImageWith(imageUrl as URL)
+            } else {
+            }
+        } else {
+        }
         // Do any additional setup after loading the view.
     }
 

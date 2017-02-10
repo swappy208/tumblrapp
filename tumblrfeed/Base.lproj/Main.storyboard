@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="Nw9-Do-Huc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,10 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="313" sectionHeaderHeight="28" sectionFooterHeight="28" id="w1Z-wF-bE8">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="313" sectionHeaderHeight="28" sectionFooterHeight="28" id="w1Z-wF-bE8">
                                 <rect key="frame" x="16" y="29" width="343" height="627"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PhotoCell" id="bV7-BE-5SV" customClass="PhotoCell" customModule="tumblrfeed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="313"/>
@@ -30,73 +31,74 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="nkz-Yc-dkM">
-                                                    <rect key="frame" x="0.0" y="8" width="343" height="281"/>
+                                                    <rect key="frame" x="8" y="8" width="324" height="275"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="PhotoCell" destination="BFk-eX-5Ca" id="mJY-gC-w44"/>
                                             <outlet property="imageViewer" destination="nkz-Yc-dkM" id="EZr-Vy-gk4"/>
                                             <outlet property="photoCell" destination="BFk-eX-5Ca" id="QPF-Bk-0Ls"/>
-                                            <segue destination="eef-DX-svx" kind="push" id="xHm-UH-b3Q"/>
+                                            <segue destination="7oW-Ua-z99" kind="push" id="Qca-zS-cZF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="grZ-2D-tff"/>
                     <connections>
                         <outlet property="tableView" destination="w1Z-wF-bE8" id="SVa-FL-zfu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-61.5" y="136.5"/>
+            <point key="canvasLocation" x="525.5" y="136.5"/>
         </scene>
         <!--Photo Details View Controller-->
-        <scene sceneID="55m-95-0Uo">
+        <scene sceneID="ppj-fv-xBr">
             <objects>
-                <viewController id="eef-DX-svx" customClass="PhotoDetailsViewController" customModule="tumblrfeed" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jlj-aR-No2">
+                <viewController id="7oW-Ua-z99" customClass="PhotoDetailsViewController" customModule="tumblrfeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sd2-aW-Man">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="fVS-yZ-fyQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="Cg1-OV-Cex">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="32G-vH-kBs"/>
+                    <navigationItem key="navigationItem" id="zEI-rL-gGt"/>
                     <connections>
-                        <outlet property="ImagesView" destination="fVS-yZ-fyQ" id="QVW-62-nuy"/>
-                        <outlet property="imageViewer" destination="jlj-aR-No2" id="aYl-38-RrA"/>
+                        <outlet property="photoImageView" destination="Cg1-OV-Cex" id="Nqh-H6-wdK"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wH1-2w-E7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9W-CQ-U3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952.5" y="136.5"/>
+            <point key="canvasLocation" x="1056.5" y="136.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="BPP-i4-6sQ">
+        <scene sceneID="h9u-nu-THp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Y9-NT-Duc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nw9-Do-Huc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ehM-gW-r6h">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="99l-6O-hmX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eef-DX-svx" kind="relationship" relationship="rootViewController" id="qPO-ja-A8W"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1pM-Sl-1Xb"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bl8-LV-LJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KdN-DG-OEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365.5" y="136.5"/>
+            <point key="canvasLocation" x="-61.5" y="136.5"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -104,7 +106,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="qPO-ja-A8W"/>
-    </inferredMetricsTieBreakers>
 </document>
