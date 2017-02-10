@@ -22,11 +22,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" id="bV7-BE-5SV" customClass="PhotoCell" customModule="tumblrfeed" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PhotoCell" id="bV7-BE-5SV" customClass="PhotoCell" customModule="tumblrfeed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="313"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bV7-BE-5SV" id="BFk-eX-5Ca">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="312"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="313"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="nkz-Yc-dkM">
@@ -39,6 +39,7 @@
                                             <outlet property="PhotoCell" destination="BFk-eX-5Ca" id="mJY-gC-w44"/>
                                             <outlet property="imageViewer" destination="nkz-Yc-dkM" id="EZr-Vy-gk4"/>
                                             <outlet property="photoCell" destination="BFk-eX-5Ca" id="QPF-Bk-0Ls"/>
+                                            <segue destination="eef-DX-svx" kind="push" id="xHm-UH-b3Q"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -54,10 +55,56 @@
             </objects>
             <point key="canvasLocation" x="-61.5" y="136.5"/>
         </scene>
+        <!--Photo Details View Controller-->
+        <scene sceneID="55m-95-0Uo">
+            <objects>
+                <viewController id="eef-DX-svx" customClass="PhotoDetailsViewController" customModule="tumblrfeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jlj-aR-No2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="fVS-yZ-fyQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="32G-vH-kBs"/>
+                    <connections>
+                        <outlet property="ImagesView" destination="fVS-yZ-fyQ" id="QVW-62-nuy"/>
+                        <outlet property="imageViewer" destination="jlj-aR-No2" id="aYl-38-RrA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wH1-2w-E7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952.5" y="136.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BPP-i4-6sQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Y9-NT-Duc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ehM-gW-r6h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eef-DX-svx" kind="relationship" relationship="rootViewController" id="qPO-ja-A8W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bl8-LV-LJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365.5" y="136.5"/>
+        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="qPO-ja-A8W"/>
+    </inferredMetricsTieBreakers>
 </document>
